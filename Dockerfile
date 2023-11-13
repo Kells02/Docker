@@ -5,7 +5,7 @@ FROM node:12.22.1-alpine3.11
 
 # Establece el directorio de trabajo dentro de la imagen para los comandos RUN,CMD,ENTRYPOINT,COPY.
 WORKDIR /app 
-# Copia archivs desde mi sistema lcoal al sistema de archivos de la imagen.
+# Copia archivos desde mi sistema local al sistema de archivos de la imagen.
 COPY . .
 # Ejecuta comandos durante la construcción de la imagen.
 RUN yarn install --production
