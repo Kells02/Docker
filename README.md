@@ -11,9 +11,12 @@
   </ul>
   <li>Gestión de Contenedores</li>
   <ul>
-    <li><span style="background-color: yellow;"><b>docker ps</b></span> Lista los onetenedores en ejecución.</li>
+    <li><b>docker ps</b> Lista los onetenedores en ejecución.</li>
     <li><b>docker ps -a</b> Lista todos los contenedores, incluido los detenidos.</li>
     <li><b>docker run nombre_de_la_imagen:tag</b> Crea y ejecuta un contenedor a partir de una imagen.</li>
+    <li><b>docker run --name mi_contenedor nombre_de_la_imagen:tag</b> Asigna un nombre al contenedor.</li>
+    <li><b>docker run -d nombre_de_la_imagen</b> Crea y ejecuta un contenedor en segundo plano.</li>
+    <li><b>docker run -p 8080:80 nombre_de_la_iamgen</b> Mapeará el puerto 80 del contenedor al puerto 8080 del host.</li>
     <li><b>docker stop ID_del_contenedor</b> Detiene un contenedor en ejecución.</li>
     <li><b>docker start ID_del_contenedor</b> Inicia un contenedor detenido.</li>
     <li><b>docker restart ID_del_contenedor</b> Reinicia un contenedor.</li>
