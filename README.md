@@ -17,6 +17,7 @@
     <li><b>docker run --name mi_contenedor nombre_de_la_imagen:tag</b> Asigna un nombre al contenedor.</li>
     <li><b>docker run -d nombre_de_la_imagen</b> Crea y ejecuta un contenedor en segundo plano.</li>
     <li><b>docker run -p 8080:80 nombre_de_la_iamgen</b> Mapeará el puerto 80 del contenedor al puerto 8080 del host.</li>
+    <li><b>docker run -v /ruta/host:/ruta/contenedor nombre_de_la_imagen</b> Monta un volumen.</li>
     <li><b>docker stop ID_del_contenedor</b> Detiene un contenedor en ejecución.</li>
     <li><b>docker start ID_del_contenedor</b> Inicia un contenedor detenido.</li>
     <li><b>docker restart ID_del_contenedor</b> Reinicia un contenedor.</li>
