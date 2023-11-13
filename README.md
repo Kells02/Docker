@@ -11,7 +11,7 @@
   </ul>
   <li>Gestión de Contenedores</li>
   <ul>
-    <li><b>docker ps</b> Lista los onetenedores en ejecución.</li>
+    <li><span style="background-color: yellow;"><b>docker ps</b></span> Lista los onetenedores en ejecución.</li>
     <li><b>docker ps -a</b> Lista todos los contenedores, incluido los detenidos.</li>
     <li><b>docker run nombre_de_la_imagen:tag</b> Crea y ejecuta un contenedor a partir de una imagen.</li>
     <li><b>docker stop ID_del_contenedor</b> Detiene un contenedor en ejecución.</li>
