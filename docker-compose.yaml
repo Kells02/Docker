@@ -1,0 +1,30 @@
+# Docker Compose
+# Esto nos va permitir correr varios contenedores usando un solo archivo y automáticamente nos va correr en la misma red.
+
+version: '3.7' # Version de la sintaxis que creando en el archivo yaml.
+
+services: # Declaramos los servicios que vamos a correr en docker-compose.
+
+  #docker run -dp 3000:3000 --network todo-app -e MYSQL_HOST=mysql -e MYSQL_USER=root -e MSYQL_PASSWORD=secret -e MYSQL_DB=todos getting-started:v1
+
+  app: # Declaramos la aplicación que vamos a correr.
+    image: pablokbs/getting-started:v1 # La imagen que va correr esta aplicación.
+    ports:
+      - 3000:3000 # Puerto que va utilizar
+    environment: # Variables de entorno
+      MYSQL_HOST: mysql
+      MYSQL_USER: root
+      MYSQL_PASSWORD: secret
+      MYSQL_DB: todos
+
+  #docker run -d --network todo-app --network-alias mysql -v todo-mysql-data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=secret -e MYSQL_DATABASE=todos mysql:5.7
+
+  mysql: # Declaramos la base de datos que vamos a utilizar.
+    image: mysql:5.7 # La imagen de MySQL que vamos a utilizar.
+    volumes:
+      - ./todo-mysql-data:/var/lib/mysql # Volumen que vamos a crear.
+    environment: # Variables de entorno.
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: todos
+
+# sudo docker-compose up -d (-d segundo plano)
